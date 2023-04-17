@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.titleTexts {
+  color: #3C486B;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputBoxIcons {
+  color: #3C486B;
+  background-color: #F9D949;
+  border: none;
+  border-radius: none;
+  padding: 11px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.inputTexts {
+  color: #3C486B;
+}
+
+.inputTexts:focus, .inputTexts:active:focus {
+  color: #3C486B;
+  box-shadow: none;
+  border: 1px solid #F9D949;
+  box-shadow: 1px 1px 5px rgba(249, 217, 73, 0.5), -1px -1px 5px rgba(249, 217, 73, 0.5);
+}
+
+.listItems {
+  background-color: #F0F0F0;
+  font-weight: 500;
+  border: none;
+}
+
+.todoText {
+  color: #3C486B;
+}
+
+.todoText.checked {
+  color: #F45050;
+  text-decoration: line-through;
+}
+
+.add-buttons {
   color: white;
+  background-color: #F9D949;
 }
 
-.App-link {
-  color: #61dafb;
+.add-buttons:hover, .add-buttons:focus,
+.add-buttons:visited, .add-buttons:active, .add-buttons:active:focus {
+  color: white;
+  background-color: #F9D949;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addBtns:disabled {
+  color: white;
+  background-color: #F9D949;
 }
+
+.delete-btns,
+.delete-btns:hover, .delete-btns:focus, 
+.delete-btns:visited, .delete-btns:active, .delete-btns:active:focus {
+  color: #fff;
+ background-color: #F45050;
+} 
+
+.cancel-btns,
+.cancel-btns:hover, .cancel-btns:focus, 
+.cancel-btns:visited, .cancel-btns:active, .cancel-btns:active:focus {
+  color: #3C486B;
+  border: none;
+  background-color: #F9D949;
+}
+ 

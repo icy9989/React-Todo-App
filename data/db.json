@@ -1,0 +1,19 @@
+{
+    "todos": [
+        {
+            "id": 1,
+            "checked": false,
+            "text": "Study data structure & algorithms"
+        },
+        {
+            "id": 2,
+            "checked": false,
+            "text": "Start design patterns"
+        },
+        {
+            "id": 3,
+            "checked": false,
+            "text": "Learn ReactJS"
+        }
+    ]
+}
