@@ -24,10 +24,10 @@ function App() {
 ]
 
 // 1st way
-//  const [ todos, setTodos ] = useState(todoLists);
+ const [ todos, setTodos ] = useState(todoLists);
 
 // 2nd way => local storage
- const [ todos, setTodos ] = useState(JSON.parse(localStorage.getItem('todoList')));
+//  const [ todos, setTodos ] = useState(JSON.parse(localStorage.getItem('todoList')));
 
  const [ newTodo, setNewTodo ] = useState('');
  const [ filter, setFilter ] = useState('All');
