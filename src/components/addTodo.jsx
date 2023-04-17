@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { FaBook } from "react-icons/fa";
-import Button from './filterButton';
 
 const AddTodo = ({ newTodo, setNewTodo, onAdd }) => {
 
