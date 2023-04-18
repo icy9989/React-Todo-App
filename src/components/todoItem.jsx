@@ -4,7 +4,7 @@ import { BiCheckbox } from 'react-icons/bi';
 import { MdOutlineEdit } from 'react-icons/md'
 import { FaTrashAlt } from 'react-icons/fa'
 
-const TodoItem = ({ todo, onCheck, onDelete }) => {
+const TodoItem = ({ todo, onCheck, onEdit, onDelete }) => {
 
   return ( 
     <li className='list-group-item my-2 d-flex justify-content-between align-items-center listItems'>
@@ -15,7 +15,7 @@ const TodoItem = ({ todo, onCheck, onDelete }) => {
                 ? <BiCheckboxChecked fontSize={26} color='#3EB489'/> 
                 : <BiCheckbox fontSize={26} color='#999'/>}
             </span>
-            <span style={{ cursor: 'pointer' }} className='mx-2'>
+            <span style={{ cursor: 'pointer' }} className='mx-2' onClick={() => onEdit(todo.id)}>
                 <MdOutlineEdit fontSize={20} color='#ffea00' />
             </span>
             <span style={{ cursor: 'pointer' }} onClick={() => onDelete(todo.id)}>

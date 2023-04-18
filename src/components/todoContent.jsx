@@ -3,7 +3,7 @@ import TodoList from './todoList'
 import FilterButton from './filterButton'
 import DeleteModal from './deleteModal'
 
-const TodoContent = ({ todos, onFilter, onCheck, onDelete, onDeleteDone, onDeleteAll }) => {
+const TodoContent = ({ todos, onFilter, onCheck, onEdit, onDelete, onDeleteDone, onDeleteAll }) => {
 
   return (
     <>
@@ -20,7 +20,7 @@ const TodoContent = ({ todos, onFilter, onCheck, onDelete, onDeleteDone, onDelet
       </div>
     </div>
     <div>
-      <TodoList todos={todos} onCheck={onCheck} onDelete={onDelete} />
+      <TodoList todos={todos} onCheck={onCheck} onEdit={onEdit} onDelete={onDelete} />
     </div>
     <div className='row'>
       <div className='col-6 p-3'>

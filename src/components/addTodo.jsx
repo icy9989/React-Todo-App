@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaBook } from "react-icons/fa";
 
-const AddTodo = ({ newTodo, setNewTodo, onAdd }) => {
+const AddTodo = ({ newTodo, setNewTodo, selectedTodo, onAdd }) => {
+
+    const value = selectedTodo ? selectedTodo.text : newTodo;
+
+    useEffect(() => {
+        console.log(value);
+    },[])
 
   return (
     <div>
@@ -14,7 +20,7 @@ const AddTodo = ({ newTodo, setNewTodo, onAdd }) => {
                             <FaBook />
                         </span>
                     </div>
-                    <input type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)} className="form-control inputTexts" placeholder="New Task" />   
+                    <input type="text" value={value} onChange={(e) => setNewTodo(e.target.value)} className="form-control inputTexts" placeholder="New Task" />   
                 </div>
                 <div className='d-grid'>
                     <button type='submit' className='btn add-buttons'>Add New Task</button>
