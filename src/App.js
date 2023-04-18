@@ -44,8 +44,8 @@ function App() {
  }
 
  const handleEdit = (id) => {
-  setSelectedTodo(todos.filter((todo) => todo.id === id))
-  console.log(selectedTodo);
+  setSelectedTodo(todos.find((todo) => todo.id === id))
+
  }
 
  const handleDelete = (id) => {
