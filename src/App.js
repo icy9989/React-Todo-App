@@ -31,6 +31,7 @@ function App() {
 
  const [ newTodo, setNewTodo ] = useState('');
  const [ filter, setFilter ] = useState('All');
+ const [ selectedTodo, setSelectedTodo ] = useState('');
 
  const saveTodos = (todoItems) => {
   setTodos(todoItems);
@@ -40,6 +41,11 @@ function App() {
  const handleCheck = (id) => {
   const todoItems = todos.map((todo) => todo.id === id ? { ...todo, checked: !todo.checked } : todo)
   saveTodos(todoItems);
+ }
+
+ const handleEdit = (id) => {
+  setSelectedTodo(todos.filter((todo) => todo.id === id))
+  console.log(selectedTodo);
  }
 
  const handleDelete = (id) => {
@@ -85,8 +91,8 @@ const handleDeleteAll = () => {
 
   return (
     <div className="container my-4">
-      <AddTodo newTodo={newTodo} setNewTodo={setNewTodo} onAdd={handleAdd} />
-      <TodoContent todos={filterTodos()} onFilter={handleFilter} onCheck={handleCheck} onDelete={handleDelete} onDeleteDone={handleDeleteDone} onDeleteAll={handleDeleteAll} />
+      <AddTodo newTodo={newTodo} setNewTodo={setNewTodo} selectedTodo={selectedTodo} onAdd={handleAdd} />
+      <TodoContent todos={filterTodos()} onFilter={handleFilter} onCheck={handleCheck} onEdit={handleEdit} onDelete={handleDelete} onDeleteDone={handleDeleteDone} onDeleteAll={handleDeleteAll} />
     </div>
   );
 }
